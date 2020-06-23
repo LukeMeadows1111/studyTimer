@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Sriracha', cursive;
+  position: relative;
+  background-color: black;
+}
+
+.cover {
+  background-image: url(./img/cover.jpg);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 1s ease-out;
+}
+h1 {
+  margin: 2% 0 7% 0;
+  text-align: center;
+  font-size: 50px;
+  /* transform: rotate(-9.5deg); */
+}
+.rotation-buttons {
+  position: absolute;
+  top: 25%;
+  left: 2%;
+  margin-bottom: 5%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100px;
+}
+button {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(99, 99, 99, 0.8);
+  color: white;
+  font-size: 20px;
+  font-family: 'Sriracha', cursive;
+  border-radius: 20px;
+  border: white 1px solid;
+  outline: none;
+  cursor: pointer;
+  padding: none;
+}
+
+.cover > * {
+  color: white;
+}
+
+.display-time-left {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  color: white;
+  font-size: 100px;
+}
+
+.count-down {
+  font-family: 'Inconsolata', monospace;
+}
+
+.cancel-button,
+.rotation-counter,
+.study-log-button {
+  position: absolute;
+  height: 35px;
+  font-size: 20px;
+  border: white 1px solid;
+  border-radius: 20px;
+}
+
+.cancel-button {
+  width: 60px;
+  top: 3%;
+  color: red;
+}
+
+.cancel-button,
+.study-log-button {
+  left: 2%;
+}
+.rotation-counter {
+  top: 3%;
+  width: 200px;
+}
+
+.rotation-counter,
+.study-log-button {
+  right: 3%;
+  text-align: center;
+}
+
+.study-log-button {
+  bottom: 3%;
+  width: 150px;
+  cursor: pointer;
+  transition: all 1s ease-out;
+}
+
+.study-log-button.active {
+  height: 94%;
+  width: 96%;
+  background-color: rgba(99, 99, 99, 0.8);
+  cursor: auto;
+}
+.study-log-button p {
+  transition: all 1s ease-out;
+  color: red;
+}
+.study-log-button.active p {
+  margin: 30px 0;
+  font-size: 50px;
+  transition: all 1s ease-out;
+}
+
+.study-log-button.active body {
+  opacity: 0;
+}
+.study-log-button ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.study-log-button li {
+  color: white;
+  border: 1px solid black;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+}
+.close-modal,
+.accrued-time {
+  position: absolute;
+  top: 0.5%;
+  pointer-events: none;
+}
+.close-modal {
+  opacity: 0;
+  font-size: 30px;
+  color: red;
+  cursor: pointer;
+  right: 1.5%;
+}
+.accrued-time {
+  left: 1.5%;
+  font-size: 20px;
+  color: white;
+}
+.accrued-time-outer {
+  transition: opacity 1s ease-out;
+  opacity: 0;
+}
+
+.study-log-button.active .close-modal {
+  opacity: 1;
+  pointer-events: all;
+}
+.study-log-button.active .accrued-time-outer {
+  opacity: 1;
+}
+.cover-log-open {
+  opacity: 0.1;
+}

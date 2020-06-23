@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/bukes.png">
+    <title>Study Timer</title>
+  </head>
+  <body>
+    <div class="cover">
+      <h1>Study Timer ⏱</h1>
+
+      <div class="rotation-buttons">
+        <button data-rotation="1">1</button>
+        <button data-rotation="2">2</button>
+        <button data-rotation="3">3</button>
+        <button data-rotation="4">4</button>
+        <button data-rotation="5">5</button>
+      </div>
+
+        <div class="display-time-left"></div>
+
+      <button class="cancel-button">&#9747</button>
+      <div class="rotation-counter">Rotations left: 0</div>
+    </div>
+    <div class="study-log-button"><p>Study Log</p><div class="showLog">
+      <ul class="log-list">
+      </ul>
+    </div>
+    <div class="close-modal">&#9747</div>
+    <div class="accrued-time-outer"><div class="accrued-time">1234</div></div>
+  </div>
+  </body>
+  <audio src="./wav/bell.wav" id="bell"></audio>
+  <audio src="./wav/hammering.wav" id="hammer"></audio>
+  <script src="./scripts.js"></script>
+</html>
